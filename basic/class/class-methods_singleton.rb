@@ -1,6 +1,9 @@
 class Logger
+
   private_class_method :new
+
   @@logger = nil
+
   def Logger.create
     if !@@logger
       new
