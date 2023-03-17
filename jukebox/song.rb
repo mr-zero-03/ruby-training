@@ -1,4 +1,4 @@
-require './song-class.rb'
+require "#{__dir__}/song-class.rb"
 
 puts 'SONG (Class)'
 a_song = Song.new( "New Gold", "Gorillaz", 180 )
