@@ -18,3 +18,9 @@ end
 songs_list_file.close
 
 puts songs.list
+
+puts "\nUsing Lookup Method"
+puts songs.lookup( "Fats" )
+puts songs.lookup( "ain't" )
+puts songs.lookup( "RED" )
+puts songs.lookup( "WoRlD" )
