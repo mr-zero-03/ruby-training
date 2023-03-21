@@ -1,3 +1,5 @@
+require "#{__dir__}/word-index-class.rb"
+
 class SongList
   # Class Methods
   MaxTime = 5 * 60 # 5 minutes (this is a constant)
@@ -11,13 +13,19 @@ class SongList
     if songs.kind_of?( Array )
       @songs = songs
     end
+    @index = WordIndex.new
   end
 
   public
 
   def append( song )
     @songs.push( song )
+    @index.index( song, song.name, song.artist )
     @songs
+  end
+
+  def lookup( word )
+    @index.lookup( word )
   end
 
   def list
